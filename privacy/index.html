@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Atlasson Privacy Policy, effective September 24, 2026.">
+    <link rel="stylesheet" href="../assets/styles.css">
+    <link rel="canonical" href="https://vytarassukys.github.io/atlassonapp/privacy/">
+    <title>Privacy Policy - Atlasson</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="../" aria-label="Atlasson home">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>Atlasson</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a class="nav-link" href="../">Home</a>
+          <a class="nav-link" href="./" aria-current="page">Privacy Policy</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="page-intro" aria-labelledby="page-title">
+        <div class="container">
+          <p class="eyebrow">Legal</p>
+          <h1 id="page-title">Privacy, clearly explained.</h1>
+          <p class="page-intro-copy">This policy explains what Atlasson handles on your devices, what happens when the app requests online map resources, and the choices you have.</p>
+          <span class="effective-date">Effective September 24, 2026</span>
+        </div>
+      </section>
+
+      <div class="container policy-layout">
+        <article class="policy-content">
+          <h2>Who is responsible for this app?</h2>
+          <p><strong>Developer/controller identity:</strong> Vytaras Sukys, Lithuania.</p>
+          <p><strong>Privacy contact:</strong> <a href="mailto:vytarasss@gmail.com">vytarasss@gmail.com</a></p>
+
+          <h2>Information Atlasson handles on your devices</h2>
+          <ul>
+            <li><strong>Location and walk history.</strong> When you explicitly start a walk on iPhone, Atlasson records accepted location fixes, including latitude and longitude, timestamps, accuracy, and available speed and heading. Recording can continue while the app is in the background during an active walk; iPhone recording requires Always location access. Pausing or stopping recording controls whether a walk is active. The fixes are first written to a protected native SQLite inbox and then committed to Atlasson's local SQLite data store.</li>
+            <li><strong>Exploration records.</strong> Atlasson stores walk sessions and points, derived trail and distance statistics, revealed map cells, and physical country and region visits locally so it can show your exploration history.</li>
+            <li><strong>Apple Watch walks.</strong> If you start a walk in the optional Watch app, it stores walk points and session details on the Watch and transfers completed walk batches to the paired iPhone using Apple's WatchConnectivity. The Watch keeps its completed copy until the iPhone acknowledges receipt. If the devices are not connected, transfer and deletion instructions can be delayed. The Watch uses an outdoor workout session for an explicitly started walk and requests no HealthKit read permissions.</li>
+            <li><strong>Apple Health distance.</strong> On iPhone, Atlasson requests read-only access to Apple Health walking and running distance for Journey progress. It stores daily distance totals and Journey allocation/progress data in local SQLite; it does not request permission to write those distance records. Erasing Atlasson data does not delete source records from Apple Health. The app source reviewed does not send HealthKit samples or derived Journey totals to a developer server.</li>
+            <li><strong>Preferences and diagnostics.</strong> Preferences and some lifecycle/permission markers are stored locally. Atlasson also keeps a bounded set of local reliability diagnostics. The diagnostics are structured events and do not include coordinates, historical routes, or raw HealthKit samples.</li>
+          </ul>
+          <p>The app uses local SQLite and local preference storage. The source review found no Atlasson account service, advertising integration, analytics integration, crash-reporting service, social feature, or developer-operated cloud sync endpoint. This does not mean that no information leaves your device: online map requests are described below.</p>
+
+          <h2>Map requests and third-party processing</h2>
+          <p>The map uses MapLibre Native and requests its Liberty style and map resources from <a href="https://tiles.openfreemap.org/">OpenFreeMap</a>, including style, vector and raster tiles, sprites, and glyphs. Map requests identify the map resources being viewed; tile selection includes zoom and tile coordinates. When the map follows your device location, the requested map area may correspond to where you are. These requests are sent to OpenFreeMap's service and may pass through its delivery infrastructure, including Cloudflare according to OpenFreeMap's published policy. This is a disclosure of map-view requests, not an upload of Atlasson's saved GPS trail or HealthKit history.</p>
+          <p>OpenFreeMap's <a href="https://openfreemap.org/privacy/">published privacy policy</a> says it collects anonymized server logs with browser type, referring/exit pages, date/time stamps, and operating system, and retains those logs indefinitely. It says IP addresses are not included in regular logs, but that IP logging may be enabled during a security incident or misuse investigation for up to 30 days. It also says Cloudflare may be used and may collect information under Cloudflare's own privacy policy. The OpenFreeMap policy was last updated February 26, 2025, and was reviewed for this draft on September 24, 2026.</p>
+          <p>That published policy does not specify whether map tile paths or tile coordinates from Atlasson's native app requests appear in the retained logs, nor does it establish the precise request fields or retention practices for Cloudflare delivery. Atlasson has not verified those details with OpenFreeMap or Cloudflare. This draft makes no claim that map requests are unretained, anonymous in all contexts, unlinkable, or limited to real-time processing. Standard network service metadata is also handled by the systems delivering those requests.</p>
+          <p>Atlasson does not send a recorded route as a route upload. Nevertheless, tile requests can reveal the places and zoom levels being viewed. You can avoid map requests by not loading the online map, but map features need an internet connection to fetch map resources.</p>
+
+          <h2>Exporting and importing backups</h2>
+          <p>Settings &gt; Data &gt; Export backup creates a JSON file. It contains raw GPS/session history, including coordinates and timestamps, exploration records, and Health-derived daily Journey distance totals and allocation data. It does not include raw HealthKit samples. The file also contains selected preferences and sync metadata. Treat it as sensitive. Atlasson does not add file-level encryption to the JSON; the temporary export file receives iOS file protection while it is being prepared.</p>
+          <p>iOS presents a share sheet and <strong>you choose the destination</strong>, such as Files, AirDrop, or another available app or service. Exporting does not erase the data kept by Atlasson. After you save or share a copy, the destination and any service you choose handle that copy under their own terms; Atlasson cannot control or erase copies saved outside the app.</p>
+          <p>Import backup lets you choose a JSON file through the iOS Files picker and restores it to an empty Atlasson data store. Imported walk history and Journey totals become local app data. Do not import a backup you do not trust.</p>
+
+          <h2>Erasing information</h2>
+          <p>Settings &gt; Data &gt; Erase all data asks for confirmation, coordinates stopping and draining an active recording, and then removes user-derived Atlasson records from the iPhone, including session points, exploration history, Journey totals and allocations, and related local state. It also resets the native location inbox and requests an erase of Watch walk data. If an Apple Watch is offline, it may not receive that request until it reconnects, so its local copy can remain until then.</p>
+          <p>Static bundled country and region reference geography, preferences, and permission markers are retained by the in-app erase. Erasing Atlasson data does not erase Apple Health records, exported backup copies, or copies held by destinations you selected. Location and other app data may also remain in operating-system or user-managed device backups; this policy does not claim a verified retention schedule for those backups or for local MapLibre caches.</p>
+          <p>Atlasson has no published fixed retention period for local records: user-derived app records remain on the device until you erase them or remove the app's stored data. Separate Watch copies and externally saved backup copies follow the conditions described above.</p>
+
+          <h2>Changes and requests</h2>
+          <p>This policy is effective September 24, 2026. For privacy questions or requests, contact <a href="mailto:vytarasss@gmail.com">vytarasss@gmail.com</a>.</p>
+
+          <footer class="policy-footer">
+            <p>Source references: Atlasson app source at <code>0caa3c7</code>; <a href="https://openfreemap.org/privacy/">OpenFreeMap Privacy Policy</a> (last updated February 26, 2025); and <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare Privacy Policy</a>.</p>
+            <p>Effective September 24, 2026.</p>
+          </footer>
+        </article>
+
+        <aside class="policy-sidebar" aria-label="Policy contact">
+          <div class="contact-card">
+            <h2>Policy contact</h2>
+            <p><strong>Vytaras Sukys</strong>Developer and controller</p>
+            <p>Lithuania</p>
+            <p><a href="mailto:vytarasss@gmail.com">vytarasss@gmail.com</a></p>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© 2026 Atlasson. Made for the long way around.</p>
+        <a href="../">Back to home</a>
+      </div>
+    </footer>
+  </body>
+</html>
