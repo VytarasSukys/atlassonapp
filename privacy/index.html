@@ -3,10 +3,19 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Atlasson Privacy Policy, effective September 24, 2026.">
+    <meta name="description" content="Atlasson Privacy Policy, effective October 3, 2026.">
     <link rel="stylesheet" href="../assets/styles.css">
     <link rel="canonical" href="https://vytarassukys.github.io/atlassonapp/privacy/">
     <title>Privacy Policy - Atlasson</title>
+
+  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="d8beff7d-342f-46bb-9151-32cc6a5f57a8" type="text/javascript" async></script>
+  <script type="text/plain" data-cookieconsent="statistics" async src="https://www.googletagmanager.com/gtag/js?id=G-2RPBH8YTK6"></script>
+  <script type="text/plain" data-cookieconsent="statistics">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2RPBH8YTK6');
+  </script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
@@ -29,7 +38,7 @@
           <p class="eyebrow">Legal</p>
           <h1 id="page-title">Privacy explained.</h1>
           <p class="page-intro-copy">This policy explains what Atlasson handles on your devices, what happens when the app requests online map resources, and the choices you have.</p>
-          <span class="effective-date">Effective September 24, 2026</span>
+          <span class="effective-date">Effective October 3, 2026</span>
         </div>
       </section>
 
@@ -47,13 +56,18 @@
             <li><strong>Apple Health distance.</strong> On iPhone, Atlasson requests read-only access to Apple Health walking and running distance for Journey progress. It stores daily distance totals and Journey allocation/progress data in local SQLite; it does not request permission to write those distance records. Erasing Atlasson data does not delete source records from Apple Health. The app source reviewed does not send HealthKit samples or derived Journey totals to a developer server.</li>
             <li><strong>Preferences and diagnostics.</strong> Preferences and some lifecycle/permission markers are stored locally. Atlasson also keeps a bounded set of local reliability diagnostics. The diagnostics are structured events and do not include coordinates, historical routes, or raw HealthKit samples.</li>
           </ul>
-          <p>The app uses local SQLite and local preference storage. The source review found no Atlasson account service, advertising integration, analytics integration, crash-reporting service, social feature, or developer-operated cloud sync endpoint. This does not mean that no information leaves your device: online map requests are described below.</p>
+          <p>The iPhone and Apple Watch app uses local SQLite and local preference storage. The app source review found no Atlasson account service, advertising integration, in-app analytics integration, crash-reporting service, social feature, or developer-operated cloud sync endpoint. This statement is about the app itself; the Atlasson website uses consent-controlled Google Analytics as described below. This does not mean that no information leaves your device: online map requests are described below.</p>
 
           <h2>Map requests and third-party processing</h2>
           <p>The map uses MapLibre Native and requests its Liberty style and map resources from <a href="https://tiles.openfreemap.org/">OpenFreeMap</a>, including style, vector and raster tiles, sprites, and glyphs. Map requests identify the map resources being viewed; tile selection includes zoom and tile coordinates. When the map follows your device location, the requested map area may correspond to where you are. These requests are sent to OpenFreeMap's service and may pass through its delivery infrastructure, including Cloudflare according to OpenFreeMap's published policy. This is a disclosure of map-view requests, not an upload of Atlasson's saved GPS trail or HealthKit history.</p>
           <p>OpenFreeMap's <a href="https://openfreemap.org/privacy/">published privacy policy</a> says it collects anonymized server logs with browser type, referring/exit pages, date/time stamps, and operating system, and retains those logs indefinitely. It says IP addresses are not included in regular logs, but that IP logging may be enabled during a security incident or misuse investigation for up to 30 days. It also says Cloudflare may be used and may collect information under Cloudflare's own privacy policy. The OpenFreeMap policy was last updated February 26, 2025, and was reviewed for this draft on September 24, 2026.</p>
           <p>That published policy does not specify whether map tile paths or tile coordinates from Atlasson's native app requests appear in the retained logs, nor does it establish the precise request fields or retention practices for Cloudflare delivery. Atlasson has not verified those details with OpenFreeMap or Cloudflare. This draft makes no claim that map requests are unretained, anonymous in all contexts, unlinkable, or limited to real-time processing. Standard network service metadata is also handled by the systems delivering those requests.</p>
           <p>Atlasson does not send a recorded route as a route upload. Nevertheless, tile requests can reveal the places and zoom levels being viewed. You can avoid map requests by not loading the online map, but map features need an internet connection to fetch map resources.</p>
+
+          <h2>Website analytics and cookies</h2>
+          <p>The Atlasson website uses Cookiebot to manage cookie consent and Google Analytics 4 to measure website usage. The Google Analytics measurement ID is <code>G-2RPBH8YTK6</code>. Analytics scripts are configured to load only after you consent to statistics cookies through Cookiebot.</p>
+          <p>If you consent, Google Analytics may process information about visits to the website such as pages viewed, approximate location derived from network information, device and browser information, interaction data, and identifiers used by Google Analytics. Google processes this information under its own terms and privacy documentation. You can refuse or withdraw statistics-cookie consent through the Cookiebot consent controls.</p>
+          <p>Website analytics is separate from the Atlasson iPhone and Apple Watch app. Atlasson does not use this website analytics configuration to upload your saved GPS trails, Apple Health data, Journey progress, or other locally stored app exploration history.</p>
 
           <h2>Exporting and importing backups</h2>
           <p>Settings &gt; Data &gt; Export backup creates a JSON file. It contains raw GPS/session history, including coordinates and timestamps, exploration records, and Health-derived daily Journey distance totals and allocation data. It does not include raw HealthKit samples. The file also contains selected preferences and sync metadata. Treat it as sensitive. Atlasson does not add file-level encryption to the JSON; the temporary export file receives iOS file protection while it is being prepared.</p>
@@ -70,7 +84,7 @@
 
           <footer class="policy-footer">
             <p>Source references: Atlasson app source at <code>0caa3c7</code>; <a href="https://openfreemap.org/privacy/">OpenFreeMap Privacy Policy</a> (last updated February 26, 2025); and <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare Privacy Policy</a>.</p>
-            <p>Effective September 24, 2026.</p>
+            <p>Effective October 3, 2026.</p>
           </footer>
         </article>
 
